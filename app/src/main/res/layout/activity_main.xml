@@ -1,18 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:paddingBottom="20dp"
+        android:text="Dan &amp; Gal Tic Tac Toe"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/tvStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="16dp"
+        android:text="X turn"
+        android:textSize="20sp" />
+
+    <GridLayout
+        android:id="@+id/grid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:columnCount="3"
+        android:rowCount="3">
+
+        <Button
+            android:id="@+id/b00"
+            style="@style/TicButton"
+            android:contentDescription="Cell row 1 column 1" />
+
+        <Button
+            android:id="@+id/b01"
+            style="@style/TicButton"
+            android:contentDescription="Cell row 1 column 2" />
+
+        <Button
+            android:id="@+id/b02"
+            style="@style/TicButton"
+            android:contentDescription="Cell row 1 column 3" />
+
+        <Button
+            android:id="@+id/b10"
+            style="@style/TicButton"
+            android:contentDescription="Cell row 2 column 1" />
+
+        <Button
+            android:id="@+id/b11"
+            style="@style/TicButton"
+            android:contentDescription="Cell row 2 column 2" />
+
+        <Button
+            android:id="@+id/b12"
+            style="@style/TicButton"
+            android:contentDescription="Cell row 2 column 3" />
+
+        <Button
+            android:id="@+id/b20"
+            style="@style/TicButton"
+            android:contentDescription="Cell row 3 column 1" />
+
+        <Button
+            android:id="@+id/b21"
+            style="@style/TicButton"
+            android:contentDescription="Cell row 3 column 2" />
+
+        <Button
+            android:id="@+id/b22"
+            style="@style/TicButton"
+            android:contentDescription="Cell row 3 column 3" />
+
+    </GridLayout>
+
+</LinearLayout>
